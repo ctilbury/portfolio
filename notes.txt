@@ -1,0 +1,4 @@
+https://www.sitepoint.com/html5-main-element/
+https://necolas.github.io/normalize.css/
+skeleton.css
+https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/#more-9045

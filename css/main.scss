@@ -1,0 +1,273 @@
+// variables
+
+$primary-font: "Roboto", sans-serif;
+$header-font: "Lato", sans-serif;
+$off-white: #f3f3f3;
+$charcoal: #2f2f2f;
+$orange: #f44336;
+
+
+
+// generics
+
+body { 
+    font-family: $primary-font; 
+    color: #555; 
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $orange;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: $orange;
+    text-decoration: underline;
+}
+
+section.light-bg {
+    background: $off-white;
+    padding: 10%;
+}
+
+// specific sections
+
+// top
+
+section#top {
+    color: $off-white;
+    background: #1c0706 url("/images/road-large.jpg") no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    
+    article {
+        width: 35%; 
+        position: absolute; 
+        bottom: 90px; 
+        right: 30px; 
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.85);
+    }
+    
+    h1, h2 {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+    }
+    
+    h1 {
+        font-size: 5.4rem;
+        text-transform: uppercase;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 3rem;
+    }
+}
+
+// skills
+
+section#skills {
+    article {
+        width: 31.3%;
+        float: left;
+        padding: 0 1%;
+    } 
+}
+
+h3 {
+    font-family: $header-font;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 4px solid $orange;
+    padding-bottom: 15px;
+}
+
+h3 span {
+    padding-right: 10px;
+    
+}
+
+
+// mac
+
+section#mac-img {
+    background: #2b0d0b url("/images/mac-large.jpg") no-repeat fixed;
+    background-size: cover;
+    min-height: 0;
+    height: 33vh;
+}
+
+
+// portfolio
+
+section#portfolio {
+    padding-bottom: 5%;
+    article {
+        width: 33.3%;
+        float: left;
+        margin-bottom: 5%;
+    }
+}
+
+.portfolio-example {
+    width: 290px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#v4p {
+    @extend .portfolio-image;
+    background: url("/images/v4p.jpg") no-repeat center;
+}
+
+#v4p:hover, #v4p:active, #v4p:focus {
+    @extend .portfolio-image-hover;
+}
+
+#nch {
+    @extend .portfolio-image;
+    background: url("/images/nch.jpg") no-repeat center;
+}
+
+#nch:hover, #nch:active, #nch:focus {
+    @extend .portfolio-image-hover;
+}
+
+#pa {
+    @extend .portfolio-image;
+    background: url("/images/pa.jpg") no-repeat center;
+}
+
+#pa:hover, #pa:active, #pa:focus {
+    @extend .portfolio-image-hover;
+}
+
+#hrch {
+    @extend .portfolio-image;
+    background: url("/images/hrch.jpg") no-repeat center;
+}
+
+#hrch:hover, #hrch:active, #hrch:focus {
+    @extend .portfolio-image-hover;
+}
+
+#psnhsft {
+    @extend .portfolio-image;
+    background: url("/images/psnhsft.jpg") no-repeat center;
+}
+
+#psnhsft:hover, #psnhsft:active, #psnhsft:focus {
+    @extend .portfolio-image-hover;
+}
+
+#bham {
+    @extend .portfolio-image;
+    background: url("/images/bham.jpg") no-repeat center;
+}
+
+#bham:hover, #bham:active, #bham:focus {
+    @extend .portfolio-image-hover;
+}
+
+.details {
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 15px;
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    a {
+        letter-spacing: 1px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.details:hover, .details:active, .details:focus {
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+h4 {
+    font-family: $header-font;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+// footer
+
+footer {
+    clear: both;
+    background: $charcoal;
+    padding: 0 10% 5%;
+    nav {
+        text-align: center;
+        a {
+            font-size: 6rem;
+            line-height: 1;
+            color: $off-white;
+        }
+    }
+    #footer-nav {
+        clear: both;
+        a {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+article#contact-details {
+    float: left;
+}
+
+article#contact-form {
+    float: right;
+}
+
+
+
+// extends
+
+.portfolio-image {
+    background-size: 100%;
+    transition: background-size 0.25s ease-out;
+}
+
+.portfolio-image-hover {
+    background-size: 110%;
+    transition: background-size 0.9s;
+}
+
+
+
+
+

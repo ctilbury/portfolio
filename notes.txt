@@ -3,24 +3,11 @@ https://necolas.github.io/normalize.css/
 skeleton.css
 https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/#more-9045
 
-- IE conditional stuff?
+- top section - h1 & lorem ipsum
+- tidy up css
+- rwd / images
 
-- normalize.css
-- skeleton.css
-- moderniser?
+———————— apply
 
-- picture element
-
-- styling
-
-- parallax scrolling
-
-- text animations
-
-- portfolio rollovers
-
-- form validation
-
-- rwd
-
-- html5 validation
+- fade in skills & examples
+- improve validation js

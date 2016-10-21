@@ -4,33 +4,44 @@
     <title>Colin Tilbury | Front End Web Developer | Nottinghamshire, UK</title>
     <meta charset="utf-8" />
     <meta name="description" content="" />
-    <meta name="author" content="Colin Tilbury">    
+    <meta name="author" content="Colin Tilbury">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
     <script src="https://use.fontawesome.com/8ecba33385.js"></script>
-    <link rel="shortcut icon" href="/favicon.ico">   
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <!-- https://daneden.github.io/animate.css -->
-    <link rel="stylesheet" type="text/css" href="animate.min.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/test.css" />
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/form-validation.js"></script>
+    
+    <!-- animate.css - https://daneden.github.io/animate.css -->
+    <!-- jquery.scrollTo - https://github.com/flesler/jquery.scrollTo -->
+
+    
 </head>
     
 <body>
     <main>
         
         <section id="top" class="">
+            <h1 class="animated bounceInDown">Colin Tilbury</h1>
             <article>
-                <header>
-                    <h1 class="animated bounceInDown">Colin Tilbury</h1>
-                </header>
-                <h2>Front End Web Developer</h2>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis et velit rutrum tincidunt. Nulla velit enim, finibus venenatis congue eu, tincidunt at elit. Nullam sed tempus eros. Aliquam a gravida eros, nec pharetra eros. Vivamus nulla nibh, scelerisque sed gravida sed, ultrices vehicula mi. In hendrerit laoreet est, quis vehicula nisl malesuada sed. Etiam efficitur eros id sapien sagittis pharetra. Morbi id pharetra ligula, ac pulvinar erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ut efficitur erat, eget pellentesque magna.</div>
+                <h2 class="animated bounceInDown">Front End Web Developer</h2>
+                <div class="animated bounceInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis et velit rutrum tincidunt. Nulla velit enim, finibus venenatis congue eu, tincidunt at elit. Nullam sed tempus eros. Aliquam a gravida eros, nec pharetra eros. Vivamus nulla nibh, scelerisque sed gravida sed, ultrices vehicula mi. In hendrerit laoreet est, quis vehicula nisl malesuada sed. Etiam efficitur eros id sapien sagittis pharetra. Morbi id pharetra ligula, ac pulvinar erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ut efficitur erat, eget pellentesque magna.</div>
             </article>
-            <nav><a href="#" title=""><span class="fa fa-chevron-down"></span></a></nav>
+            <nav><a href="#skills" class="scroll" title=""><span class="fa fa-angle-down"></span></a></nav>
         </section>
         
-        <section id="skills" class="">
-            <article>
+        <section id="skills" class="light-bg">
+            <h2 class="hide">Skills</h2>
+            <article class="animated fadeInUp">
                 <header><h3><span class="fa fa-code" aria-hidden="true"></span>Front End Development</h3></header>
                 <ul>
                     <li>HTML / HTML5</li>
@@ -39,7 +50,7 @@
                     <li>Bootstrap</li>
                 </ul>
             </article>
-            <article>
+            <article class="animated fadeInUp">
                 <header><h3><span class="fa fa-mobile" aria-hidden="true"></span>Usability</h3></header>
                 <ul>
                     <li>Responsive web design</li>
@@ -48,7 +59,7 @@
                     <li>Web standards</li>
                 </ul>
             </article>
-            <article>
+            <article class="animated fadeInUp">
                 <header><h3><span class="fa fa-cogs" aria-hidden="true"></span>Tools</h3></header>
                 <ul>
                     <li>Photoshop</li>
@@ -56,51 +67,67 @@
                     <li>Version control - SVN / GIT</li>
                 </ul>
             </article>
+            <nav><a href="#portfolio" class="scroll" title=""><span class="fa fa-angle-down"></span></a></nav>
         </section>
         
-        <section id="mac-img" class=""></section>
+        <section id="mac-img" class="">
+            <h2 class="hide">Mac Image</h2>
+        </section>
         
-        <section id="portfolio" class="">
+        <section id="portfolio" class="light-bg">
+            <h2 class="hide">Portfolio</h2>
             <article>
-                <div>
-                    <header><h4>Vets4Pets</h4></header>
-                    <p>www.vets4pets.com</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="v4p" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>Vets4Pets</h4></header>
+                        <p><a href="http://www.vets4pets.com/" title="Vets4Pets">www.vets4pets.com</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
             <article>
-                <div>
-                    <header><h4>Nottingham City Homes</h4></header>
-                    <p>www.nottinghamcityhomes.org.uk</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="nch" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>Nottingham City Homes</h4></header>
+                        <p><a href="http://www.nottinghamcityhomes.org.uk/" title="Nottingham City Homes">www.nottinghamcityhomes.org.uk</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
             <article>
-                <div>
-                    <header><h4>The Publishers Association</h4></header>
-                    <p>www.publishers.org.uk</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="pa" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>The Publishers Association</h4></header>
+                        <p><a href="http://www.publishers.org.uk/" title="The Publishers Association">www.publishers.org.uk</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
             <article>
-                <div>
-                    <header><h4>Hounslow &amp; Richmond Community Healthcare</h4></header>
-                    <p>www.hrch.nhs.uk</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="hrch" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>Hounslow &amp; Richmond Community Healthcare</h4></header>
+                        <p><a href="http://www.hrch.nhs.uk/" title="Hounslow &amp; Richmond Community Healthcare">www.hrch.nhs.uk</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
             <article>
-                <div>
-                    <header><h4>Peterborough &amp; Stamford Hospitals NHS Foundation Trust</h4></header>
-                    <p>www.peterboroughandstamford.nhs.uk</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="psnhsft" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>Peterborough &amp; Stamford Hospitals NHS Foundation Trust</h4></header>
+                        <p><a href="http://www.peterboroughandstamford.nhs.uk/" title="Peterborough &amp; Stamford Hospitals NHS Foundation Trust">www.peterboroughandstamford.nhs.uk</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
             <article>
-                <div>
-                    <header><h4>Birmingham Community Healthcare</h4></header>
-                    <p>www.bhamcommunity.nhs.uk</p>
-                    <p>CSS/HTML website CMS integration</p>
+                <div id="bham" class="portfolio-example">
+                    <div class="details">
+                        <header><h4>Birmingham Community Healthcare</h4></header>
+                        <p><a href="http://www.bhamcommunity.nhs.uk/" title="Birmingham Community Healthcare">www.bhamcommunity.nhs.uk</a></p>
+                        <p>CSS/HTML website CMS integration</p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -108,48 +135,70 @@
     </main>
     
     <footer>
-        <nav><a href="#" title=""><span class="fa fa-chevron-up"></span></a></nav>
-        <article>
-            <picture></picture>
-            <div>
+        <nav><a href="#top" class="scroll" title=""><span class="fa fa-angle-up"></span></a></nav>
+        <article id="contact-details">
+            <picture>
+                <source srcset="/images/me.jpg" media="(min-width: 400px)">
+                <img src="/images/me.jpg" alt="">
+            </picture>
+            <div id="details-1">
                 <h4>Colin Tilbury</h4>
                 <p>Front end web developer</p>
                 <p>Nottinghamshire, UK</p>
-                <p><span class="fa fa-file-pdf-o" aria-hidden="true"></span><a href="#" title="">Download CV (PDF)</a></p>
+                <p class="cv"><span class="fa fa-file-pdf-o" aria-hidden="true"></span><a href="#" title="">Download CV (PDF)</a></p>
             </div>
-            <div>
-                <ul class="fa-ul">
-                    <li><span class="fa-li fa fa-phone" aria-hidden="true"></span>07812 335 723</li>
-                    <li><span class="fa-li fa fa-envelope-o" aria-hidden="true"></span><a href="#" title="">hello@colintilbury.com</a></li>
-                    <li><span class="fa-li fa fa-linkedin-square" aria-hidden="true"></span>LinkedIn</li>
-                    <li><span class="fa-li fa fa-github" aria-hidden="true"></span>Github</li>
+            <div id="details-2">
+                <ul>
+                    <li><span class="fa fa-phone" aria-hidden="true"></span>07812 335 723</li>
+                    <li><span class="fa fa-envelope-o" aria-hidden="true"></span><a href="#" title="">hello@colintilbury.com</a></li>
+                    <li><span class="fa fa-linkedin-square" aria-hidden="true"></span>LinkedIn</li>
+                    <li><span class="fa fa-github" aria-hidden="true"></span>Github</li>
                 </ul>
             </div>
         </article>
-        <article>
-            <form>
-                <label for="email-input">Your email</label>
-                <input class="" type="email" placeholder="test@email.com" id="email-input">
-                <label for="reason-input">Reason for contacting</label>
-                <select class="" id="reason-input">
-                    <option value="Option 1">Option 1</option>
-                    <option value="Option 2">Option 2</option>
-                    <option value="Option 3">Option 3</option>
-                </select>
-                <label for="message-input">Message</label>
-                <textarea class="" id="message-input"></textarea>
-                <input class="" type="submit" value="Submit">
+        <article id="contact-form">
+            <h4 class="hide">Contact Form</h4>
+            <form name="contact-form" id="contact" action="form-action.php" method="post">
+                    <label for="email-input">Your email</label>
+                    <input class="animated" type="email" name="emailaddress" placeholder="test@email.com" id="email-input">
+                    <div class="form-message animated flash" id="no-email"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span>Please enter an email address</div>
+                    <div class="form-message animated flash" id="invalid-email"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span>Please enter a valid email address</div>
+
+                    <label for="reason-input">Reason for contacting</label>
+                    <select class="animated" id="reason-input" name="reason">
+                        <option value="0" selected>Please select reason</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <div class="form-message animated flash" id="no-reason"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span>Please select an option from the list</div>
+
+                    <label for="message-input">Message</label>
+                    <textarea class="animated" id="message-input" name="message"></textarea>
+                    <div class="form-message animated flash" id="no-message"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span>Please enter some text here</div>
+
+                    <input class="button-primary" type="button" value="Submit" onclick="validateForm(this.form)">
+                    <div class="form-message animated fadeOut" id="form-success"><span class="fa fa-check" aria-hidden="true"></span>Thank you, your message has been sent</div>
             </form>
         </article>
-        <nav>
+        <nav id="footer-nav">
             <ul>
-                <li><a href="#" title="">About Me</a><span class="sep">|</span></li>
-                <li><a href="#" title="">Skills</a><span class="sep">|</span></li>
-                <li><a href="#" title="">Portfolio</a><span class="sep">|</span></li>
-                <li><a href="#" title="">Contact</a><span class="sep">|</span></li>
+                <li><a href="#top" class="scroll" title="">About</a><span class="sep">|</span></li>
+                <li><a href="#skills" class="scroll" title="">Skills</a><span class="sep">|</span></li>
+                <li><a href="#portfolio" class="scroll" title="">Portfolio</a></li>
             </ul>
         </nav>
     </footer>
+    
+    <!-- scroll function -->
+    <script>
+        $(function(){
+          $("a.scroll").click(function(e){
+            e.preventDefault();
+            $('html,body').scrollTo(this.hash,this.hash); 
+          });
+        });
+    </script>
     
 </body>
 </html>

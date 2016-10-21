@@ -1,0 +1,34 @@
+section#top h1 {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0;
+}
+
+section#top h2 {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+}
+
+section#top div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+}
+
+section#top a, section#skills a { 
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.3s;
+}
+
+#contact-form input, #contact-form select, #contact-form textarea { 
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+}
+
+.form-message { 
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-delay: 0.2s;
+}
+
+#form-success { 
+      -webkit-animation-duration: 2.5s;
+      -webkit-animation-delay: 2s;
+}

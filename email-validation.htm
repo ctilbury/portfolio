@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple email validation</title>
+        <style media="screen" type="text/css">
+            .form-message { display: none; }
+            .show { display: block; }
+        </style>
+    </head>
+    <body>
+        <script>
+        
+
+        
+        function isValidEmail(emailAddress) {
+            /* returns true if the following conditions are met (case insensitive throughout):            
+            // starts with zero or more groups of letters, numbers or hyphens, which must start with a letter and end with a dot: ([a-z]([a-z]|\d|-)*\.)*
+            // then one group of letters, numbers or hyphens, which must start with a letter: ([a-z]([a-z]|\d|-)*)           
+            // then the @ symbol: @
+            // then one or more groups of letters, numbers or hyphens, which must start with a letter and end with a dot: ([a-z]([a-z]|\d|-)*\.)+
+            // then ends with one group of 2-4 letters: ([a-z]{2,4}) */
+            var myRegExp = /^([a-z]([a-z]|\d|-)*\.)*([a-z]([a-z]|\d|-)*)@([a-z]([a-z]|\d|-)*\.)+([a-z]{2,4})$/i;
+            
+            if (!myRegExp.test(emailAddress)) {
+                var errorDiv = document.getElementById("invalid-email");
+                errorDiv.classList.add("show");
+                return(false);
+            } else {
+                return(true);
+            }
+        }
+            
+        // ---------------------------------------------------
+            
+            
+        // create array for error message divs
+        var errorMessageArray = [];
+        errorMessageArray[0] = "no-email";
+        errorMessageArray[1] = "no-reason";
+        errorMessageArray[2] = "no-message";
+        errorMessageArray[3] = "invalid-email";
+        
+        function clearErrorMessages() {
+            for ( i = 0; i < 4; i++ ) {
+                var errorMessage = errorMessageArray[i];
+                var errorDiv = document.getElementById(errorMessage);
+                if (errorDiv.classList.contains("show")) {
+                    errorDiv.classList.remove("show");
+                    }
+                }
+            }
+
+        function noMissingFields(form) {
+            
+            // checks to see if all fields are filled in
+            
+            // store form input data in an array
+            var inputArray = [];
+            inputArray[0] = form.emailaddress.value;
+            inputArray[1] = form.reason.value;
+            inputArray[2] = form.message.value;
+
+            //
+            for ( i = 0; i < 3; i++ ) {                
+                if (inputArray[i] == "") {
+                    var errorMessage = errorMessageArray[i];
+                    var errorDiv = document.getElementById(errorMessage);
+                    errorDiv.classList.add("show");
+                    return(false);
+                }
+            }
+            
+            if (inputArray[1] < 1) {
+                var errorDiv = document.getElementById("no-reason");
+                errorDiv.classList.add("show");
+                return(false);
+            }
+            return(true);
+
+        }
+            
+        function validateForm(form) {
+            
+            // clear any existing error messages
+            clearErrorMessages();
+            
+            var email = form.emailaddress.value;
+            
+            if ( noMissingFields(form) && isValidEmail(email) ) {
+                var errorDiv = document.getElementById("form-success");
+                errorDiv.classList.add("show");
+            } else {
+                return(false);
+            }
+            
+        }
+        
+        
+
+
+        </script>
+
+        
+        <form name="contact-form" action="" method="post">
+                <label for="email-input">Your email</label>
+                <input class="" type="email" name="emailaddress" placeholder="test@email.com" id="email-input">
+                <div class="form-message form-error" id="no-email">Please enter an email address</div>
+                <div class="form-message form-error" id="invalid-email">Please enter a valid email address</div>
+                
+                <label for="reason-input">Reason for contacting</label>
+                <select class="" id="reason-input" name="reason">
+                    <option value="0" selected>Please select reason</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <div class="form-message form-error" id="no-reason">Please select an option from the list</div>
+                
+                <label for="message-input">Message</label>
+                <textarea class="" id="message-input" name="message"></textarea>
+                <div class="form-message form-error" id="no-message">Please enter some text here</div>
+                
+                <input class="button-primary" type="button" value="Submit" formnovalidate onclick="validateForm(this.form)">
+                <div class="form-message" id="form-success">Thank you, your message has been sent</div>
+        </form>
+        
+     </body>
+</html>

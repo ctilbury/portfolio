@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
     "netlify-cli": "^10.12.1",
+    "sass": "^1.54.1",
     "vite": "^3.0.0"
   }
 }

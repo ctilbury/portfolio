@@ -7,7 +7,7 @@ import TextExamples from './components/TextExamples.vue'
   <HeaderBar />
   <div class="page-wrap">
     <main>
-      <div id="div1"><h1>hello</h1></div>
+      <div id="div1"><h1><span>hello</span></h1></div>
       <div id="div2"></div>
       <div id="div3"></div>
       <div id="div4"></div>
@@ -20,9 +20,13 @@ import TextExamples from './components/TextExamples.vue'
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 h1 {
-  color: var(--old-burgundy);
+  color: $fire-opal;
+
+  span {
+    color: $linen;
+  }
 }
 </style>

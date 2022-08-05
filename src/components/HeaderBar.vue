@@ -19,7 +19,7 @@ const count = ref(0)
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 header {
   font-family: 'Bebas Neue', cursive;
@@ -28,8 +28,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--linen-transparent);
-  border-top: 4px var(--fire-opal) solid;
+  background-color: $linen-transparent;
+  border-top: 4px $fire-opal solid;
 }
 
 .header-wrap {

@@ -13,39 +13,39 @@ main {
 }
 
 #div1 {
-  background-color: var(--fire-opal);
+  background-color: $fire-opal;
 }
 
 #div2 {
-  background-color: var(--tuscan-red);
+  background-color: $tuscan-red;
 }
 
 #div3 {
-  background-color: var(--hookers-green);
+  background-color: $hookers-green;
 }
 
 #div4 {
-  background-color: var(--fire-opal);
+  background-color: $fire-opal;
 }
 
 #div5 {
-  background-color: var(--tuscan-red);
+  background-color: $tuscan-red;
 }
 
 #div6 {
-  background-color: var(--fire-opal);
+  background-color: $fire-opal;
 }
 
 #div7 {
-  background-color: var(--copper-red);
+  background-color: $copper-red;
 }
 
 #div8 {
-  background-color: var(--hookers-green)
+  background-color: $hookers-green;
 }
 
 #div9 {
-  background-color: var(--fire-opal);
+  background-color: $fire-opal;
 }
 
 @media screen and (min-width: 600px) {

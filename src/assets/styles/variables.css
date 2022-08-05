@@ -1,0 +1,10 @@
+:root {
+  --rich-black: rgb(18, 22, 25);
+  --old-burgundy: rgb(72, 50, 56);
+  --tuscan-red: rgb(125, 78, 87);
+  --fire-opal: rgb(239, 100, 97);
+  --copper-red: rgb(214, 104, 83);
+  --hookers-green: rgb(57, 115, 103);
+  --linen: rgb(245, 238, 230);
+  --linen-transparent: rgba(245, 238, 230, 0.2);  
+}

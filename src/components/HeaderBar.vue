@@ -19,9 +19,7 @@ const count = ref(0)
 
 </template>
 
-<style lang="scss" scoped>
-
-$off-white: #f5eee6;
+<style scoped>
 
 header {
   font-family: 'Bebas Neue', cursive;
@@ -30,8 +28,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba($off-white, 0.1);
-  border-top: 4px #ef6461 solid;
+  background-color: var(--linen-transparent);
+  border-top: 4px var(--fire-opal) solid;
 }
 
 .header-wrap {

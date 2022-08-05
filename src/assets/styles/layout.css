@@ -13,39 +13,39 @@ main {
 }
 
 #div1 {
-  background-color: rgba(#ef6461, 0.2);
+  background-color: var(--fire-opal);
 }
 
 #div2 {
-  background-color: rgba(#ef6461, 0.3);
+  background-color: var(--tuscan-red);
 }
 
 #div3 {
-  background-color: rgba(#397367, 0.3);
+  background-color: var(--hookers-green);
 }
 
 #div4 {
-  background-color: rgba(#ef6461, 0.2);
+  background-color: var(--fire-opal);
 }
 
 #div5 {
-  background-color: rgba(#ef6461, 0.3);
+  background-color: var(--tuscan-red);
 }
 
 #div6 {
-  background-color: rgba(#ef6461, 0.2);
+  background-color: var(--fire-opal);
 }
 
 #div7 {
-  background-color: rgba(#397367, 0.2);
+  background-color: var(--copper-red);
 }
 
 #div8 {
-  background-color: rgba(#397367, 0.3);
+  background-color: var(--hookers-green)
 }
 
 #div9 {
-  background-color: rgba(#ef6461, 0.3);
+  background-color: var(--fire-opal);
 }
 
 @media screen and (min-width: 600px) {

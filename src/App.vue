@@ -22,17 +22,30 @@
         <div id="div9"></div>
       </main>
     </div>
+    <modal
+      v-if="showModal"
+      @close="showModal = false"
+    >
+      <h3 slot="header">Hi, I'm a modal.</h3>
+    </modal>
   </div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import TextExamples from './components/TextExamples.vue'
+import Modal from './components/Modal.vue'
 
 export default {
   components: {
     HeaderBar,
-    TextExamples
+    TextExamples,
+    Modal
+  },
+  data() {
+    return {
+      showModal: true
+    }
   }
 }
 </script>

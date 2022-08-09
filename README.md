@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# My Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Created with [Vite](https://vitejs.dev/), originally as a Vue 3 app. Decided to switch back to Vue 2 to speed up development as I'm not up to speed on Vue 3 yet. Deployed with [Netlify](https://www.netlify.com/) at [ctilbury.co.uk](https://ctilbury.co.uk).
 
-## Recommended IDE Setup
+Uses Sass as a css pre-processor.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Setup notes
+
+To make Vite work with Vue 2, [vite-plugin-vue2](https://www.npmjs.com/package/vite-plugin-vue2) and [vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler) are required. A full guide can be found [here](https://www.mathew-paul.nz/posts/how-to-use-vue2-with-vite/).
+
+Node.js 16+ is required, and npm packages will need to be installed with the `--legacy-peer-deps` flag.
+

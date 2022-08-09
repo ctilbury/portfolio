@@ -1,26 +1,28 @@
-<script setup>
-import { ref } from 'vue'
+<template>
+  <div>
+    <p class="header">COLIN TILBURY</p>
+    <p class="w-300">{{ msg }} Light</p>
+    <p class="w-400">{{ msg }} Regular</p>
+    <p class="w-500">{{ msg }} Medium</p>
+    <p class="w-600">{{ msg }} Semibold</p>
+    <p class="w-700">{{ msg }} Bold</p>
+    <div class="card">
+      <button type="button" @click="count++">count is {{ count }}</button>
+    </div>
+  </div>
+</template>
 
-defineProps({
-  msg: String
-})
-
-const count = ref(0)
+<script>
+export default {
+  props: {
+    msg: {
+      type: String,
+      default: ''
+    }
+  }
+}
 </script>
 
-<template>
-  <p class="header">COLIN TILBURY</p>
-  <p class="w-300">{{ msg }} Light</p>
-  <p class="w-400">{{ msg }} Regular</p>
-  <p class="w-500">{{ msg }} Medium</p>
-  <p class="w-600">{{ msg }} Semibold</p>
-  <p class="w-700">{{ msg }} Bold</p>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-  </div>
-
-</template>
 
 <style scoped>
 p {

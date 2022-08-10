@@ -1,14 +1,11 @@
 <template>
-  <div>
+  <div id="about">
     <p class="header">COLIN TILBURY</p>
     <p class="w-300">{{ msg }} Light</p>
     <p class="w-400">{{ msg }} Regular</p>
     <p class="w-500">{{ msg }} Medium</p>
     <p class="w-600">{{ msg }} Semibold</p>
     <p class="w-700">{{ msg }} Bold</p>
-    <div class="card">
-      <button type="button" @click="count++">count is {{ count }}</button>
-    </div>
   </div>
 </template>
 
@@ -26,7 +23,7 @@ export default {
 
 <style scoped>
 p {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .header {

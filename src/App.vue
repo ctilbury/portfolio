@@ -1,27 +1,23 @@
 <template>
   <div>
     <header-bar />
-    <div class="page-wrap">
-      <main>
-        <div id="div1">
-          <h1>
-            <span>hello</span>
-          </h1>
-        </div>
-        <div id="div2">
-          <text-examples
-            msg="test"
-          />
-        </div>
-        <div id="div3"></div>
-        <div id="div4"></div>
-        <div id="div5"></div>
-        <div id="div6"></div>
-        <div id="div7"></div>
-        <div id="div8"></div>
-        <div id="div9"></div>
-      </main>
-    </div>
+    <main>
+      <div id="div1">
+        <h1>
+          <span>hello</span>
+        </h1>
+      </div>
+      <about
+        msg="about"
+      />
+      <div id="div3"></div>
+      <div id="div4"></div>
+      <div id="div5"></div>
+      <div id="div6"></div>
+      <div id="div7"></div>
+      <div id="div8"></div>
+      <div id="div9"></div>
+    </main>
     <modal
       v-if="showModal"
       @close="showModal = false"
@@ -33,18 +29,18 @@
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
-import TextExamples from './components/TextExamples.vue'
+import About from './components/About.vue'
 import Modal from './components/Modal.vue'
 
 export default {
   components: {
     HeaderBar,
-    TextExamples,
+    About,
     Modal
   },
   data() {
     return {
-      showModal: true
+      showModal: false
     }
   }
 }

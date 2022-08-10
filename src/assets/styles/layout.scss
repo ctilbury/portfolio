@@ -1,88 +1,45 @@
-main {
+#about-section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 1fr);
-  margin-top: 4.5rem;
+  grid-template-rows: repeat(3, 1fr);
 }
 
-// #div1 {
-//   background-color: $fire-opal;
-// }
-
-// #about {
-//   background-color: $tuscan-red;
-// }
-
-#div3 {
-  background-color: $rich-black;
+#projects-section {
+  background-color: $hookers-green-transparent;
 }
 
-// #div4 {
-//   background-color: $fire-opal;
+// #content-section {
+
 // }
 
-// #div5 {
-//   background-color: $tuscan-red;
-// }
-
-// #div6 {
-//   background-color: $fire-opal;
-// }
-
-// #div7 {
-//   background-color: $copper-red;
-// }
-
-// #div8 {
-//   background-color: $hookers-green;
-// }
-
-// #div9 {
-//   background-color: $fire-opal;
-// }
 
 @media screen and (min-width: 600px) {
   $max-container-width: 1280px;
   $gutter-width: calc((100vw - $max-container-width) / 2);
 
-  main {
-    grid-template-columns: $gutter-width repeat(6, 1fr) $gutter-width;
-    grid-template-rows: auto 6rem 15rem 15rem 3rem;
+  section {
+    height: 100vh;
+  }
+
+  #about-section {
+    grid-template-columns: $gutter-width repeat(2, 1fr) $gutter-width;
+    grid-template-rows: auto 25vh;
+
+    &::after {
+      content: '';
+      background-color: $rich-black;
+      grid-column: 1 / 5;
+      grid-row: 2 / 3;
+    }
+  }
+
+  #about {
+    grid-column: 3 / 4;
+    padding-top: 4.5rem;
   }
 
   #sticker {
-    grid-column: 2 / 4;
-  }
-  
-  #about {
-    grid-column: 5 / 8;
-  }
-  
-  #div3 {
-    grid-column: 1 / 9;
-  }
-  
-  #div4 {
-    grid-column: 2 / 4;
-  }
-  
-  #div5 {
-    grid-column: 4 / 6;
-  }
-  
-  #div6 {
-    grid-column: 6 / 8;
-  }
-  
-  #div7 {
-    grid-column: 2 / 5;
-  }
-  
-  #div8 {
-    grid-column: 5 / 8;
-  }
-  
-  #div9 {
-    grid-column: 2 / 8;
+    grid-column: 2 / 3;
+    padding-top: 4.5rem;
   }
 }

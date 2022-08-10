@@ -7,11 +7,15 @@
 <style lang="scss" scoped>
 
 #sticker {
-  padding: 3.5rem 7rem 0;
+  position: relative;
 }
 
 img {
-  width: 100%;
+  position: absolute;
+  bottom: -4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
   display: block;
 }
 

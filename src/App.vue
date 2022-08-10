@@ -2,15 +2,12 @@
   <div>
     <header-bar />
     <main>
-      <sticker />
-      <about />
-      <div id="div3"></div>
-      <div id="div4"></div>
-      <div id="div5"></div>
-      <div id="div6"></div>
-      <div id="div7"></div>
-      <div id="div8"></div>
-      <div id="div9"></div>
+      <section id="about-section">
+        <sticker />
+        <about />
+      </section>
+      <section id="projects-section"></section>
+      <section id="contact-section"></section>
     </main>
     <modal
       v-if="showModal"
@@ -41,13 +38,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-h1 {
-  color: $fire-opal;
-
-  span {
-    color: $linen;
-  }
-}
-</style>

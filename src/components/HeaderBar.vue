@@ -14,13 +14,15 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: $linen-transparent;
-  border-top: 4px $fire-opal solid;
+  background-color: $rich-black;
+  border-top: 0.5rem $hookers-green solid;
 }
 
 .header-wrap {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
 }
 </style>

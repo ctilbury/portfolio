@@ -2,45 +2,44 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(9, 1fr);
-  margin-top: 4rem;
-  min-height: 100vh;
+  margin-top: 4.5rem;
 }
 
-#div1 {
-  background-color: $fire-opal;
-}
+// #div1 {
+//   background-color: $fire-opal;
+// }
 
-#about {
-  background-color: $tuscan-red;
-}
+// #about {
+//   background-color: $tuscan-red;
+// }
 
 #div3 {
-  background-color: $hookers-green;
+  background-color: $rich-black;
 }
 
-#div4 {
-  background-color: $fire-opal;
-}
+// #div4 {
+//   background-color: $fire-opal;
+// }
 
-#div5 {
-  background-color: $tuscan-red;
-}
+// #div5 {
+//   background-color: $tuscan-red;
+// }
 
-#div6 {
-  background-color: $fire-opal;
-}
+// #div6 {
+//   background-color: $fire-opal;
+// }
 
-#div7 {
-  background-color: $copper-red;
-}
+// #div7 {
+//   background-color: $copper-red;
+// }
 
-#div8 {
-  background-color: $hookers-green;
-}
+// #div8 {
+//   background-color: $hookers-green;
+// }
 
-#div9 {
-  background-color: $fire-opal;
-}
+// #div9 {
+//   background-color: $fire-opal;
+// }
 
 @media screen and (min-width: 600px) {
   $max-container-width: 1280px;
@@ -48,11 +47,11 @@ main {
 
   main {
     grid-template-columns: $gutter-width repeat(6, 1fr) $gutter-width;
-    grid-template-rows: 25rem 6rem 15rem 15rem 3rem;
+    grid-template-rows: auto 6rem 15rem 15rem 3rem;
   }
 
-  #div1 {
-    grid-column: 2 / 5;
+  #sticker {
+    grid-column: 2 / 4;
   }
   
   #about {

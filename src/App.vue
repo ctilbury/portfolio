@@ -2,14 +2,8 @@
   <div>
     <header-bar />
     <main>
-      <div id="div1">
-        <h1>
-          <span>hello</span>
-        </h1>
-      </div>
-      <about
-        msg="about"
-      />
+      <sticker />
+      <about />
       <div id="div3"></div>
       <div id="div4"></div>
       <div id="div5"></div>
@@ -29,12 +23,14 @@
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
+import Sticker from './components/Sticker.vue'
 import About from './components/About.vue'
 import Modal from './components/Modal.vue'
 
 export default {
   components: {
     HeaderBar,
+    Sticker,
     About,
     Modal
   },

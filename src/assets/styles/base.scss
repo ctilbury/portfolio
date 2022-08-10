@@ -1,8 +1,6 @@
 :root {
   font-family: 'Zilla Slab', serif;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
 
   color: $linen;
   background-color: $rich-black;
@@ -12,6 +10,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html {
+  // https://heropatterns.com/
+  background-image: url("data:image/svg+xml,%3Csvg width='4.5rem' height='4.5rem' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23397367' fill-opacity='0.16' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 a {
@@ -29,10 +39,10 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+// h1 {
+//   font-size: 3.2em;
+//   line-height: 1.1;
+// }
 
 button {
   border-radius: 8px;
@@ -59,10 +69,3 @@ button:focus-visible {
 .card {
   padding: 2em;
 }
-
-/* #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */

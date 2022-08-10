@@ -1,50 +1,28 @@
 <template>
   <div id="about">
-    <p class="header">COLIN TILBURY</p>
-    <p class="w-300">{{ msg }} Light</p>
-    <p class="w-400">{{ msg }} Regular</p>
-    <p class="w-500">{{ msg }} Medium</p>
-    <p class="w-600">{{ msg }} Semibold</p>
-    <p class="w-700">{{ msg }} Bold</p>
+    <h1>COLIN TILBURY</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor sed ipsum nec dignissim. Vivamus nec metus aliquam velit bibendum egestas eu ac lorem. Vestibulum ultrices elit tortor. Vivamus ultrices sollicitudin dapibus. Mauris ac augue quis odio tempor bibendum in vitae nisl. Maecenas eget tellus placerat, tristique lectus tempus, iaculis sem. Nunc urna nisl, tincidunt ut semper sit amet, condimentum sit amet est. Mauris nisl nulla, vestibulum vitae vehicula faucibus, ornare interdum nisl. Donec iaculis commodo volutpat.</p>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    msg: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>
+<style lang="scss" scoped>
 
-
-<style scoped>
-p {
-  font-size: 2rem;
+#about {
+  margin-top: 3.5rem;
 }
 
-.header {
+h1 {
   font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  line-height: 1.1;
   letter-spacing: 1px;
+  color: $fire-opal;
+  margin: 0 0 1.5rem 0;
 }
 
-.w-300 {
-  font-weight: 300;
-}
-.w-400 {
-  font-weight: 400;
-}
-.w-500 {
-  font-weight: 500;
-}
-.w-600 {
-  font-weight: 600;
-}
-.w-700 {
-  font-weight: 700;
+p {
+  background-color: $rich-black;
+  padding: 2rem;
 }
 
 </style>

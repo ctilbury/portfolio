@@ -16,6 +16,7 @@ header {
   right: 0;
   background-color: $rich-black;
   border-top: 0.5rem $hookers-green solid;
+  z-index: 1;
 }
 
 .header-wrap {

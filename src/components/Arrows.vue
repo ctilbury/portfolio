@@ -4,7 +4,7 @@
       v-show="section !== 'about'"
       href=""
       class="nav-arrow arrow-up"
-      @click.prevent="scroll('up')"
+      @click.prevent="autoScroll('up')"
     >
       <img
         src="../assets/images/arrow-up.png"
@@ -15,7 +15,7 @@
       v-show="section !== 'contact'"
       href=""
       class="nav-arrow arrow-down"
-      @click.prevent="scroll('down')"
+      @click.prevent="autoScroll('down')"
     >
       <img
         src="../assets/images/arrow-down.png"
@@ -32,6 +32,10 @@ export default {
     section: {
       type: String,
       default: ''
+    },
+    scrolledToBottom: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -44,11 +48,15 @@ export default {
     }
   },
   methods: {
-    scroll(direction) {
-      let sectionIndex = this.sections.indexOf(this.section)
-      direction === 'down' ? sectionIndex++ : sectionIndex--
-      const newSection = this.sections[sectionIndex]
-      this.$emit('scrollToSection', newSection)
+    autoScroll(direction) {
+      if (this.scrolledToBottom) {
+        this.$emit('scrollToSection', 'about')
+      } else {
+        let sectionIndex = this.sections.indexOf(this.section)
+        direction === 'down' ? sectionIndex++ : sectionIndex--
+        const newSection = this.sections[sectionIndex]
+        this.$emit('scrollToSection', newSection)
+      }
     }
   }
 }

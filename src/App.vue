@@ -21,7 +21,9 @@
       </section>
     </main>
     <arrows
+      v-if="showArrows"
       :section="currentSection"
+      :scrolled-to-bottom="scrolledToBottom"
       @scrollToSection="scrollToSection"
     />
     <modal
@@ -51,18 +53,47 @@ export default {
   data() {
     return {
       currentSection: 'about',
+      showArrows: true,
+      scrolledToBottom: false,
       showModal: false
     }
   },
   methods: {
     scrollToSection(newSection) {
+      window.removeEventListener('scroll', this.handleScroll)
+
       this.currentSection = newSection
       const el = this.$refs[`${newSection}Section`]
 
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
       }
+
+      // need to re-add scroll event listener after a timeout
+    },
+
+    handleScroll() {
+      // if the user scrolls manually, hide the arrows
+      this.showArrows = false
+
+      // when they stop scrolling:
+      // a. if they're at the bottom -> show a 'back to top' arrow
+      // b. if they're at the top -> behave as if the page has just loaded
+
+      const contactTopPos = document.querySelector('#contact-section').getBoundingClientRect().top
+
+      if (contactTopPos === 0) {
+        this.showArrows = true
+        this.currentSection = 'contact'
+        this.scrolledToBottom = true
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

@@ -2,13 +2,56 @@
   <header>
     <div class="header-wrap">
       <div>Colin Tilbury | Front End Developer</div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a 
+              href=""
+              @click.prevent="scrollTo('about')"
+            >
+              About
+            </a>
+            <span class="divider">|</span>
+          </li>
+          <li>
+            <a 
+              href=""
+              @click.prevent="scrollTo('projects')"
+            >
+              Projects
+            </a>
+            <span class="divider">|</span>
+          </li>
+          <li>
+            <a 
+              href=""
+              @click.prevent="scrollTo('contact')"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 </template>
 
+<script>
+export default {
+  name: 'HeaderBar',
+  methods: {
+    scrollTo(section) {
+      this.$emit('scrollToSection', section)
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
+
 header {
   font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   position: fixed;
   top: 0;
@@ -25,5 +68,29 @@ header {
   height: 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: $linen;
+    text-decoration: none;
+  }
+
+  .divider {
+    display: inline-block;
+    padding: 0 4px;
+  }
+}
+
 </style>

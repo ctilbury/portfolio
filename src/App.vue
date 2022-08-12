@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header-bar />
+    <header-bar
+      @scrollToSection="scrollToSection"
+    />
     <main>
       <section
         id="about-section"

@@ -32,10 +32,6 @@ export default {
     section: {
       type: String,
       default: ''
-    },
-    scrolledToBottom: {
-      type: Boolean,
-      default: false
     }
   },
   data() {
@@ -49,14 +45,10 @@ export default {
   },
   methods: {
     autoScroll(direction) {
-      if (this.scrolledToBottom) {
-        this.$emit('scrollToSection', 'about')
-      } else {
-        let sectionIndex = this.sections.indexOf(this.section)
-        direction === 'down' ? sectionIndex++ : sectionIndex--
-        const newSection = this.sections[sectionIndex]
-        this.$emit('scrollToSection', newSection)
-      }
+      let sectionIndex = this.sections.indexOf(this.section)
+      direction === 'down' ? sectionIndex++ : sectionIndex--
+      const newSection = this.sections[sectionIndex]
+      this.$emit('scrollToSection', newSection)
     }
   }
 }

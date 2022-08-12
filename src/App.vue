@@ -20,10 +20,9 @@
       >
       </section>
     </main>
-    <arrows
+    <scroll-arrows
       v-if="showArrows"
       :section="currentSection"
-      :scrolled-to-bottom="scrolledToBottom"
       @scrollToSection="scrollToSection"
     />
     <modal
@@ -39,7 +38,7 @@
 import HeaderBar from './components/HeaderBar.vue'
 import Sticker from './components/Sticker.vue'
 import About from './components/About.vue'
-import Arrows from './components/Arrows.vue'
+import ScrollArrows from './components/ScrollArrows.vue'
 import Modal from './components/Modal.vue'
 
 export default {
@@ -47,19 +46,19 @@ export default {
     HeaderBar,
     Sticker,
     About,
-    Arrows,
+    ScrollArrows,
     Modal
   },
   data() {
     return {
       currentSection: 'about',
       showArrows: true,
-      scrolledToBottom: false,
       showModal: false
     }
   },
   methods: {
     scrollToSection(newSection) {
+      // remove manual scroll event listener temporarily while auto scroll is happening
       window.removeEventListener('scroll', this.handleScroll)
 
       this.currentSection = newSection
@@ -69,7 +68,10 @@ export default {
         el.scrollIntoView({ behavior: 'smooth' })
       }
 
-      // need to re-add scroll event listener after a timeout
+      // add event listener back in after a timeout to allow auto scroll to finish
+      setTimeout(() => {
+        window.addEventListener('scroll', this.handleScroll)
+      }, 1500)
     },
 
     handleScroll() {
@@ -77,15 +79,20 @@ export default {
       this.showArrows = false
 
       // when they stop scrolling:
-      // a. if they're at the bottom -> show a 'back to top' arrow
-      // b. if they're at the top -> behave as if the page has just loaded
-
+      // a. if they're at the bottom, show up arrow
       const contactTopPos = document.querySelector('#contact-section').getBoundingClientRect().top
 
       if (contactTopPos === 0) {
-        this.showArrows = true
         this.currentSection = 'contact'
-        this.scrolledToBottom = true
+        this.showArrows = true
+      }
+
+      // b. if they're at the top, behave as if the page has just loaded
+      const aboutTopPos = document.querySelector('#about-section').getBoundingClientRect().top
+
+      if (aboutTopPos === 0) {
+        this.currentSection = 'about'
+        this.showArrows = true
       }
     }
   },

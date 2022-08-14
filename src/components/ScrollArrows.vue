@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'Arrows',
+  name: 'ScrollArrows',
   props: {
     section: {
       type: String,

@@ -7,6 +7,11 @@
       <div class="peel-back" />
       <div class="peel-bottom" />
     </div>
+    <img
+      src="../assets/images/arrow-down.png"
+      alt="down arrow"
+      class="nav-arrow"
+    />
   </div>
 </template>
 
@@ -61,28 +66,28 @@ export default {
 
 #sticker {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  transform: rotate(-5deg);
 }
 
 #sticker-peel {
   transition: opacity 0.15s ease-in-out;
+  // transform: rotate(-5deg);
 }
 
 .peel {
   width: 320px;
   height: 427px;
-  margin: auto;
+
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .hidden {
   opacity: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
 }
 
 .peel-back {
@@ -91,6 +96,18 @@ img {
 
 .peel-bottom {
   background: transparent;
+}
+
+.nav-arrow {
+  // display: none;
+  display: block;
+  width: 5rem;
+}
+
+@media screen and (min-width: 600px) {
+  #sticker {
+    align-items: center;
+  }
 }
 
 </style>

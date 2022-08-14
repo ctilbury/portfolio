@@ -1,7 +1,12 @@
 #about-section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+#sticker {
+  height: 100vh;
+  padding: 9rem 0 4.5rem;
 }
 
 #projects-section {
@@ -14,8 +19,7 @@
 
 
 @media screen and (min-width: 600px) {
-  $max-container-width: 1280px;
-  $gutter-width: calc((100vw - $max-container-width) / 2);
+  $gutter-width: 2rem;
 
   section {
     height: 100vh;
@@ -23,7 +27,7 @@
 
   #about-section {
     grid-template-columns: $gutter-width repeat(2, 1fr) $gutter-width;
-    grid-template-rows: auto 25vh;
+    grid-template-rows: auto 9rem;
 
     &::after {
       content: '';
@@ -33,13 +37,23 @@
     }
   }
 
+  #sticker {
+    height: auto;
+    grid-column: 2 / 3;
+    padding-top: 4.5rem;
+  }
+
   #about {
     grid-column: 3 / 4;
     padding-top: 4.5rem;
   }
+}
 
-  #sticker {
-    grid-column: 2 / 3;
-    padding-top: 4.5rem;
+@media screen and (min-width: 1280px) {
+  $max-container-width: 1280px;
+  $gutter-width: calc((100vw - $max-container-width) / 2);
+
+  #about-section {
+    grid-template-columns: $gutter-width repeat(2, 1fr) $gutter-width;
   }
 }

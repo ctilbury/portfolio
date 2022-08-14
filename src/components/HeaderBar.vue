@@ -59,38 +59,62 @@ header {
   right: 0;
   background-color: $rich-black;
   border-top: 0.5rem $hookers-green solid;
-  z-index: 1;
+  z-index: 5;
 }
 
 .header-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 
 nav {
-  ul {
-    list-style-type: none;
-    margin: 0;
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    display: block;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
+
+    a {
+      color: $linen;
+      text-decoration: none;
+    }
+
+    .divider {
+      display: inline-block;
+      padding: 0 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  $max-container-width: 1280px;
+  $gutter-width: calc((100vw - $max-container-width) / 2);
+
+  header {
+    display: grid;
+    grid-template-columns: $gutter-width auto $gutter-width;
+}
+
+  .header-wrap {
+    grid-column: 2 / 3;
     padding: 0;
   }
 
-  li {
-    display: inline;
-  }
-
-  a {
-    color: $linen;
-    text-decoration: none;
-  }
-
-  .divider {
-    display: inline-block;
-    padding: 0 4px;
-  }
 }
 
 </style>

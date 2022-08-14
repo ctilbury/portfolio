@@ -56,31 +56,38 @@ export default {
 
 <style lang="scss" scoped>
 #arrows {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: none;
 }
 
-.nav-arrow {
-  position: absolute;
-  right: 1.5rem;
-  display: block;
-  width: 5rem;
-  cursor: pointer;
-
-  &.arrow-up {
-    top: 6rem;
-  }
-
-  &.arrow-down {
-    bottom: 1.5rem;
-  }
-
-  img {
-    width: 100%;
+@media screen and (min-width: 600px) {
+  #arrows {
     display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-arrow {
+    position: absolute;
+    right: 1.5rem;
+    display: block;
+    width: 5rem;
+    cursor: pointer;
+
+    &.arrow-up {
+      top: 6rem;
+    }
+
+    &.arrow-down {
+      bottom: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
   }
 }
 </style>

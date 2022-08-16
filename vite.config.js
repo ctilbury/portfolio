@@ -5,7 +5,10 @@ module.exports = {
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/assets/styles/variables.scss";`
+        additionalData: `
+          @import "./src/assets/styles/variables.scss";
+          @import "./src/assets/styles/animation.scss";
+        `
       }
     }
   }

@@ -60,6 +60,8 @@ header {
   background-color: $rich-black;
   border-top: 0.5rem $hookers-green solid;
   z-index: 5;
+  display: grid;
+  grid-template-columns: 2rem auto 2rem;
 }
 
 .header-wrap {
@@ -67,7 +69,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  grid-column: 2 / 3;
 }
 
 nav {
@@ -100,7 +102,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1344px) {
 
   $max-container-width: 1280px;
   $gutter-width: calc((100vw - $max-container-width) / 2);
@@ -108,13 +110,7 @@ nav {
   header {
     display: grid;
     grid-template-columns: $gutter-width auto $gutter-width;
-}
-
-  .header-wrap {
-    grid-column: 2 / 3;
-    padding: 0;
   }
-
 }
 
 </style>

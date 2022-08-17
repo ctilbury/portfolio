@@ -13,8 +13,22 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: $fire-opal;
+  margin: 0 0 1.5rem 0;
 }
 
 p {

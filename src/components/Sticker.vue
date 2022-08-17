@@ -103,6 +103,7 @@ export default {
   width: 5rem;
   opacity: 0;
   animation: arrowBounce 2s 3s 1 ease-in-out; // duration 2s, delay 3s, 1 repeat
+  display: none;
 }
 
 @media screen and (min-width: 600px) {

@@ -13,9 +13,9 @@ export default {
 
 <style lang="scss" scoped>
 
-#about {
-  margin-top: 3.5rem;
-}
+// #about {
+//   margin-top: 3.5rem;
+// }
 
 h1 {
   font-family: 'Bebas Neue', cursive;

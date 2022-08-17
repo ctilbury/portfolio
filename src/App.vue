@@ -10,16 +10,19 @@
       >
         <sticker />
         <about />
+        <div id="skills">skills icons here</div>
       </section>
       <section
         id="projects-section"
         ref="projectsSection"
       >
+        <h2>PROJECTS</h2>
       </section>
       <section
         id="contact-section"
         ref="contactSection"
       >
+        <h2>CONTACT</h2>
       </section>
     </main>
     <scroll-arrows
@@ -54,7 +57,7 @@ export default {
   data() {
     return {
       currentSection: 'about',
-      showArrows: true,
+      showArrows: false,
       showModal: false
     }
   },

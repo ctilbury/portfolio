@@ -1,7 +1,27 @@
 #about-section {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 2rem auto 2rem;
+  grid-template-rows: repeat(3, auto);
+
+  &::before, &::after {
+    content: '';
+    background-color: $rich-black;
+    grid-row: 3 / 4;
+  }
+  
+  &::before {
+    grid-column: 1 / 2;
+  }
+  
+  &::after {
+    grid-column: 3 / 4;
+  }
+}
+
+#sticker,
+#about,
+#skills {
+  grid-column: 2 / 3;
 }
 
 #sticker {
@@ -9,31 +29,34 @@
   padding: 9rem 0 4.5rem;
 }
 
+#skills {
+  background-color: $rich-black;
+  padding: 2rem 0;
+}
+
 #projects-section {
   background-color: $hookers-green-transparent;
 }
 
-#content-section {
-  background-color: $rich-black;
-}
-
-
 @media screen and (min-width: 600px) {
-  $gutter-width: 2rem;
-
   section {
     height: 100vh;
   }
 
   #about-section {
-    grid-template-columns: $gutter-width repeat(2, 1fr) $gutter-width;
+    grid-template-columns: 2rem repeat(2, 1fr) 2rem;
     grid-template-rows: auto 9rem;
 
-    &::after {
-      content: '';
-      background-color: $rich-black;
-      grid-column: 1 / 5;
+    &::before, &::after {
       grid-row: 2 / 3;
+    }
+
+    &::before {
+      grid-column: 1 / 2;
+    }
+
+    &::after {
+      grid-column: 4 / 5;
     }
   }
 
@@ -47,9 +70,13 @@
     grid-column: 3 / 4;
     padding-top: 4.5rem;
   }
+
+  #skills {
+    grid-column: 2 / 4;
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1344px) {
   $max-container-width: 1280px;
   $gutter-width: calc((100vw - $max-container-width) / 2);
 

@@ -10,19 +10,19 @@
       >
         <sticker />
         <about />
-        <div id="skills">skills icons here</div>
+        <skills />
       </section>
       <section
         id="projects-section"
         ref="projectsSection"
       >
-        <h2>PROJECTS</h2>
+        <projects />
       </section>
       <section
         id="contact-section"
         ref="contactSection"
       >
-        <h2>CONTACT</h2>
+        <contact />
       </section>
     </main>
     <scroll-arrows
@@ -43,6 +43,9 @@
 import HeaderBar from './components/HeaderBar.vue'
 import Sticker from './components/Sticker.vue'
 import About from './components/About.vue'
+import Skills from './components/Skills.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 import ScrollArrows from './components/ScrollArrows.vue'
 import Modal from './components/Modal.vue'
 
@@ -51,6 +54,9 @@ export default {
     HeaderBar,
     Sticker,
     About,
+    Skills,
+    Projects,
+    Contact,
     ScrollArrows,
     Modal
   },
@@ -109,3 +115,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+#projects-section {
+  background-color: $hookers-green-transparent;
+}
+
+</style>

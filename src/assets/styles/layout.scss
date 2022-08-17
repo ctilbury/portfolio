@@ -1,8 +1,11 @@
-#about-section {
+#about-section,
+#projects-section,
+#contact-section {
   display: grid;
   grid-template-columns: 2rem auto 2rem;
-  grid-template-rows: repeat(3, auto);
+}
 
+#about-section {
   &::before, &::after {
     content: '';
     background-color: $rich-black;
@@ -20,22 +23,15 @@
 
 #sticker,
 #about,
-#skills {
+#skills,
+#projects,
+#contact {
   grid-column: 2 / 3;
 }
 
 #sticker {
   height: 100vh;
   padding: 9rem 0 4.5rem;
-}
-
-#skills {
-  background-color: $rich-black;
-  padding: 2rem 0;
-}
-
-#projects-section {
-  background-color: $hookers-green-transparent;
 }
 
 @media screen and (min-width: 600px) {
@@ -82,5 +78,10 @@
 
   #about-section {
     grid-template-columns: $gutter-width repeat(2, 1fr) $gutter-width;
+  }
+
+  #projects-section,
+  #contact-section {
+    grid-template-columns: $gutter-width auto $gutter-width;
   }
 }

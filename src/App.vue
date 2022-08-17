@@ -95,7 +95,7 @@ export default {
 
       if (contactTopPos === 0) {
         this.currentSection = 'contact'
-        this.showArrows = true
+        // this.showArrows = true
       }
 
       // b. if they're at the top, behave as if the page has just loaded
@@ -103,7 +103,7 @@ export default {
 
       if (aboutTopPos === 0) {
         this.currentSection = 'about'
-        this.showArrows = true
+        // this.showArrows = true
       }
     }
   },

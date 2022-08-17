@@ -13,22 +13,33 @@ export default {
 
 <style lang="scss" scoped>
 
-// #about {
-//   margin-top: 3.5rem;
-// }
-
 h1 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 5rem;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  color: $fire-opal;
-  margin: 0 0 1.5rem 0;
+  padding-left: 1rem;
 }
 
 p {
-  background-color: $rich-black;
-  padding: 2rem;
+  background-color: $rich-black-transparent;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    padding-left: 2rem;
+  }
+
+  p {
+    border-radius: 0.4rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 0;
+  }
 }
 
 </style>

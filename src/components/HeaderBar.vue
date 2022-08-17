@@ -51,7 +51,7 @@ export default {
 
 header {
   font-family: 'Bebas Neue', cursive;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   position: fixed;
   top: 0;
@@ -61,7 +61,7 @@ header {
   border-top: 0.5rem $hookers-green solid;
   z-index: 5;
   display: grid;
-  grid-template-columns: 2rem auto 2rem;
+  grid-template-columns: 1.5rem auto 1.5rem;
 }
 
 .header-wrap {
@@ -77,6 +77,10 @@ nav {
 }
 
 @media screen and (min-width: 600px) {
+  header {
+    font-size: 1.2rem;
+  }
+
   nav {
     display: block;
 

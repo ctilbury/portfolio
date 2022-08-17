@@ -57,7 +57,7 @@ export default {
         stickerWidth = areaWidth
         stickerHeight = Math.round(stickerWidth * heightMultiplier)
       } else {
-        stickerHeight = Math.round(areaHeight * 0.85)
+        stickerHeight = Math.round(areaHeight * 0.9)
         stickerWidth = Math.round(stickerHeight * widthMultiplier)
       }
 
@@ -65,9 +65,9 @@ export default {
       sticker.style.width = `${stickerWidth}px`
       sticker.style.height = `${stickerHeight}px`
 
-      // if (!isNarrowViewport) {
-      //   this.setStickerRotation()
-      // }
+      if (!isNarrowViewport) {
+        this.setStickerRotation()
+      }
 
       this.setUpPeel(stickerWidth, stickerHeight)
     },

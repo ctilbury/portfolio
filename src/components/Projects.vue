@@ -13,4 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 
+#projects {
+  padding: 2rem 0;
+}
+
 </style>

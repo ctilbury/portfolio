@@ -2,7 +2,7 @@
 #projects-section,
 #contact-section {
   display: grid;
-  grid-template-columns: 2rem auto 2rem;
+  grid-template-columns: 1.5rem auto 1.5rem;
 }
 
 #about-section {
@@ -40,7 +40,7 @@
   }
 
   #about-section {
-    grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+    grid-template-columns: 1.5rem repeat(2, 1fr) 1.5rem;
     grid-template-rows: auto 9rem;
 
     &::before, &::after {

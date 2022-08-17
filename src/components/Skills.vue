@@ -14,7 +14,7 @@ export default {
 
 #skills {
   background-color: $rich-black;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 </style>

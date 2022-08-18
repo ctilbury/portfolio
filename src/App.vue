@@ -3,6 +3,9 @@
     <header-bar
       @scrollToSection="scrollToSection"
     />
+    <mobile-menu
+      @scrollToSection="scrollToSection"
+    />
     <main>
       <section
         id="about-section"
@@ -46,6 +49,7 @@ import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
+import MobileMenu from './components/MobileMenu.vue'
 import ScrollArrows from './components/ScrollArrows.vue'
 import Modal from './components/Modal.vue'
 
@@ -57,6 +61,7 @@ export default {
     Skills,
     Projects,
     Contact,
+    MobileMenu,
     ScrollArrows,
     Modal
   },

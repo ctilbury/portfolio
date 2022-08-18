@@ -14,7 +14,11 @@ export default {
 <style lang="scss" scoped>
 
 #projects {
-  padding: 2rem 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 </style>

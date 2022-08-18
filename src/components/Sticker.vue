@@ -61,6 +61,12 @@ export default {
         stickerWidth = Math.round(stickerHeight * widthMultiplier)
       }
 
+      // for tall and wide screens
+      if (stickerWidth > 640 ) {
+        stickerWidth = 640
+        stickerHeight = Math.round(stickerWidth * heightMultiplier)
+      }
+
       const sticker = document.querySelector('.peel')
       sticker.style.width = `${stickerWidth}px`
       sticker.style.height = `${stickerHeight}px`

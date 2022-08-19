@@ -20,14 +20,24 @@ export default {
 
 #skills {
   background-color: $rich-black;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 1.5rem 1rem;
   display: flex;
 }
 
 img {
   display: block;
-  height: 46px;
+  height: 2.5rem;
   width: auto;
+}
+
+@media screen and (min-width: 600px) {
+  #skills {
+    padding-left: 2rem;
+  }
+
+  img {
+    height: 4rem;
+  }
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <h1>COLIN TILBURY</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor sed ipsum nec dignissim. Vivamus nec metus aliquam velit bibendum egestas eu ac lorem. Vestibulum ultrices elit tortor. Vivamus ultrices sollicitudin dapibus. Mauris ac augue quis odio tempor bibendum in vitae nisl. Maecenas eget tellus placerat, tristique lectus tempus, iaculis sem. Nunc urna nisl, tincidunt ut semper sit amet, condimentum sit amet est. Mauris nisl nulla, vestibulum vitae vehicula faucibus, ornare interdum nisl. Donec iaculis commodo volutpat.</p>
+    <p>I'm a front end developer based in Derbyshire, UK, with years of experience building responsive websites and user interfaces. I love solving problems and creating things.</p>
   </div>
 </template>
 
